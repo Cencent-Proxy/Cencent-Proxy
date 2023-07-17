@@ -1,5 +1,5 @@
 
-# Cecent Proxy
+# Cencent Proxy
 
 A fast, simple, private proxy powered by ultraviolet.
 
