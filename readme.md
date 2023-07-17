@@ -85,7 +85,7 @@ Additional notes?
 
 Where is the demo?
 
-- [soon]
+- [Right here!](https://cencent.onrender.com)
 
 Where is the source code?
 
