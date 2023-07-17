@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Themes Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link id="theme-style" rel="stylesheet" type="text/css" href="">
+    <meta charset="UTF-8">
+    <meta name="description" content="Cencent UV proxy">
+    <meta name="keywords" content="UV, Cencent, Ultraviolet">
+    <meta name="author" content="Oh On Bob">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+</head>
+<body>
+    <h1 style="padding: 150px;">Themes Page</h1>
+    <div class="theme-selector">
+        <label>
+            <input class="checkbox-tools" type="radio" name="theme" value="styles" id="theme">
+            <label for="theme">
+                Default Theme
+            </label>     
+        </label>
+        <label>
+            <input class="checkbox-tools" type="radio" name="theme" value="dark" id="dark">
+            <label for="dark">
+                Dark Theme
+            </label> 
+        </label>
+        <label>
+            <input class="checkbox-tools" type="radio" name="theme" value="blue" id="blue">
+            <label for="blue">
+                Blue Theme
+            </label> 
+        </label>
+    </div>
+
+    <script>
+document.addEventListener("DOMContentLoaded",function(){var e=localStorage.getItem("theme"),t=document.getElementsByName("theme");if(e){for(var n=0;n<t.length;n++)if(t[n].value===e){t[n].checked=!0,a(e);break}}else a("default");for(var n=0;n<t.length;n++)t[n].addEventListener("change",function(){this.checked&&a(this.value)});function a(e){document.getElementById("theme-style").href=e+".css",localStorage.setItem("theme",e)}});
+    </script>
+</body>
+</html>

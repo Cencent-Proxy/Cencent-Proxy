@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Settings</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="description" content="Cencent UV proxy">
+    <meta name="keywords" content="UV, Cencent, Ultraviolet">
+    <meta name="author" content="Oh On Bob">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+</head>
+<body>
+    <script src="script.js"></script>
+    <h1 style="padding: 150px;">Cencent Settings</h1>
+    <form id="settings-form">
+        <h2 for="favicon-input">Favicon URL:</h2>
+        <input type="text" id="favicon-input" placeholder="Enter the URL of the favicon">
+        <br/>
+        <h2 for="title-input">Website Title:</h2>
+        <input type="text" id="title-input" placeholder="Enter the new website title">
+        <br/>
+        <br/>
+        <h2 for="search-input">Search Engine:</h2>
+        <input type="text" id="search-input" placeholder="https://google.com/search?q=%s">
+        <br/>
+        <br/>
+        <h2 for="exit-input">Emergency Exit HotKey:</h2>
+        <input type="text" id="exit-input" placeholder="q" maxlength="1">
+        <br/>
+        <br/>
+        <h2 for="site-input">Emergency Exit Site:</h2>
+        <input type="text" id="site-input" placeholder="https://classroom.google.com">
+        <br/>
+        <br/>
+        <input type="submit" value="Save Settings">
+    </form>
+
+    <script>
+        document.addEventListener("DOMContentLoaded",function(){var e=localStorage.getItem("favicon"),t=localStorage.getItem("title"),n=localStorage.getItem("search"),i=localStorage.getItem("exit"),l=localStorage.getItem("site");document.getElementById("favicon-input").value=e||"",document.getElementById("title-input").value=t||"",document.getElementById("search-input").value=n||"",document.getElementById("exit-input").value=i||"",document.getElementById("site-input").value=l||"",document.getElementById("settings-form").addEventListener("submit",function(e){e.preventDefault();var t=document.getElementById("favicon-input").value,n=document.getElementById("title-input").value,i=document.getElementById("search-input").value,l=document.getElementById("exit-input").value,a=document.getElementById("site-input").value,s=document.querySelector("link[rel='icon']");s?s.href=t:((s=document.createElement("link")).rel="icon",s.href=t,document.head.appendChild(s)),document.title=n,localStorage.setItem("favicon",t),localStorage.setItem("title",n),localStorage.setItem("search",i),localStorage.setItem("exit",l),localStorage.setItem("site",a);var m=document.createElement("p");m.className="success-message",m.textContent="Settings saved successfully!",document.getElementById("settings-form").appendChild(m),setTimeout(function(){m.remove()},3e3)})});
+    </script>
+</body>
+</html>
