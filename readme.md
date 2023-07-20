@@ -10,7 +10,7 @@ Created for titanium network proxathon 2023.
 
 ![Logo](https://i.ibb.co/D1Hq5By/Screenshot-2023-07-17-142551.png)
 
-##Deployement
+## Deployement
 
 [![Deploy to Heroku](https://binbashbanana.github.io/deploy-buttons/buttons/remade/heroku.svg)](https://heroku.com/deploy/?template=https://github.com/Thisisanalthowcool/Cencent-Proxy)
 [![Run on Replit](https://binbashbanana.github.io/deploy-buttons/buttons/remade/replit.svg)](https://replit.com/github/Thisisanalthowcool/Cencent-Proxy)
